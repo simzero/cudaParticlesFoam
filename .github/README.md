@@ -13,7 +13,7 @@ The following command will install OptiX in a local folder:
 Set the following `OptiX_INSTALL_DIR` variable pointing to your OptiX installation path, for example:
 
 ```
-export OptiX_INSTALL_DIR=${HOME}/cuda-particles-foam/NVIDIA-OptiX-SDK-7.0.0-linux64
+export OptiX_INSTALL_DIR=${HOME}/cudaParticlesFoam/NVIDIA-OptiX-SDK-7.0.0-linux64
 ```
 
 and check that the `CUDA_HOME` is set up to your CUDA Toolkit installation path:
