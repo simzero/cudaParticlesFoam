@@ -53,7 +53,7 @@ and execute:
 
 ## Running with Docker
 
-You need to first configure your machine for using GPUs within Docker containers. Follow X for instructions.
+You need to first configure your machine for using GPUs within Docker containers. Follow this [link](https://docs.nvidia.com/ai-enterprise/deployment-guide/dg-docker.html) for instructions.
 
 Once you can run Docker containers with GPUs run:
 
