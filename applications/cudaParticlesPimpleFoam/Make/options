@@ -1,6 +1,5 @@
 EXE_INC = \
     -DNDEBUG -MD -MT -MF \
-    -I/home/carlos/OpenFOAM/ThirdParty-v2206/sources/paraview/ParaView-v5.10.1/VTK/Common/DataModel \
     -I$(LIB_SRC)/conversion/lnInclude \
     -I$(LIB_SRC)/fileFormats/lnInclude \
     -I$(LIB_SRC)/surfMesh/lnInclude \
