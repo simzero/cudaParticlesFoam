@@ -1,0 +1,31 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2106                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      transportProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+startTime       282;
+
+endTime         382;
+
+diffusionCoeff  1.5e-05;
+
+numParticles    1e05;
+
+seedingBox      (-0.02 0.025 0.0001) (0.0 0.0 -0.0001);
+
+dt              1e-04;
+
+saveInterval    10;
+
+// ************************************************************************* //

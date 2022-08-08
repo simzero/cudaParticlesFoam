@@ -1,0 +1,4 @@
+#!/bin/bash
+
+(cd incompressible/cudaParticlesUncoupledFoam/pitzDaily && ./Allclean)
+(cd incompressible/cudaParticlesPimpleFoam/TJunction && ./Allclean)

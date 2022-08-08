@@ -1,0 +1,21 @@
+EXE_INC = \
+    -DNDEBUG -MD -MT -MF \
+    -I$(LIB_SRC)/finiteVolume/lnInclude \
+    -I$(LIB_SRC)/meshTools/lnInclude \
+    -I$(LIB_SRC)/sampling/lnInclude \
+    -I../../src \
+    -I../../third_party/RTXAdvect \
+    -I../../third_party/RTXAdvect/owl/owl/include \
+    -I$(OptiX_INSTALL_DIR)/include \
+    -I$(CUDA_HOME)/include
+
+EXE_LIBS = \
+    -L$(CUDA_HOME)/lib64 \
+    -L$(FOAM_USER_LIBBIN) \
+    -lfiniteVolume \
+    -lfvOptions \
+    -lmeshTools \
+    -lsampling \
+    -lcuda \
+    -lcudart \
+    -lcudaParticleAdvection

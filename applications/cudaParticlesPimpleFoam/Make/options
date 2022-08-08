@@ -1,0 +1,39 @@
+EXE_INC = \
+    -DNDEBUG -MD -MT -MF \
+    -I/home/carlos/OpenFOAM/ThirdParty-v2206/sources/paraview/ParaView-v5.10.1/VTK/Common/DataModel \
+    -I$(LIB_SRC)/conversion/lnInclude \
+    -I$(LIB_SRC)/fileFormats/lnInclude \
+    -I$(LIB_SRC)/surfMesh/lnInclude \
+    -I$(LIB_SRC)/finiteVolume/lnInclude \
+    -I$(LIB_SRC)/meshTools/lnInclude \
+    -I$(LIB_SRC)/sampling/lnInclude \
+    -I$(LIB_SRC)/TurbulenceModels/turbulenceModels/lnInclude \
+    -I$(LIB_SRC)/TurbulenceModels/incompressible/lnInclude \
+    -I$(LIB_SRC)/transportModels \
+    -I$(LIB_SRC)/transportModels/incompressible/singlePhaseTransportModel \
+    -I$(LIB_SRC)/dynamicMesh/lnInclude \
+    -I$(LIB_SRC)/dynamicFvMesh/lnInclude \
+    -I../../src \
+    -I../../third_party/RTXAdvect \
+    -I../../third_party/RTXAdvect/owl/owl/include \
+    -I$(OptiX_INSTALL_DIR)/include \
+    -I$(CUDA_HOME)/include
+
+EXE_LIBS = \
+    -L$(CUDA_HOME)/lib64 \
+    -L$(FOAM_USER_LIBBIN) \
+    -lconversion \
+    -lfileFormats \
+    -lsurfMesh \
+    -lturbulenceModels \
+    -lincompressibleTurbulenceModels \
+    -lincompressibleTransportModels \
+    -lfiniteVolume \
+    -lfvOptions \
+    -lmeshTools \
+    -lsampling \
+    -ldynamicMesh \
+    -ldynamicFvMesh \
+    -lcuda \
+    -lcudart \
+    -lcudaParticleAdvection

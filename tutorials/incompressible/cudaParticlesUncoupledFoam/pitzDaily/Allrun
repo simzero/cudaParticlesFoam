@@ -1,0 +1,12 @@
+#!/bin/bash
+#------------------------------------------------------------------------------
+cd "${0%/*}" || exit                                # Run from this directory
+. ${WM_PROJECT_DIR:?}/bin/tools/RunFunctions        # Tutorial run functions
+. ${WM_PROJECT_DIR:?}/bin/tools/CleanFunctions      # Tutorial clean functions
+#------------------------------------------------------------------------------
+
+blockMesh
+foamDictionary system/controlDict -entry deltaT -set 1.0
+foamJob -screen simpleFoam
+foamDictionary system/controlDict -entry deltaT -set 0.1 
+foamJob -screen cudaParticlesUncoupledFoam

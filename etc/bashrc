@@ -1,0 +1,2 @@
+alias runWithDocker="docker run --rm -e NVIDIA_DRIVER_CAPABILITIES=graphics,compute \
+-d --rm -v \${PWD}:/sim --gpus all cudaparticlesfoam-rt"

@@ -1,0 +1,3 @@
+cudaParticlesPimpleFoam.C
+
+EXE = $(FOAM_APPBIN)/cudaParticlesPimpleFoam

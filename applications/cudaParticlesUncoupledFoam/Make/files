@@ -1,0 +1,3 @@
+cudaParticlesUncoupledFoam.C
+
+EXE = $(FOAM_APPBIN)/cudaParticlesUncoupledFoam
