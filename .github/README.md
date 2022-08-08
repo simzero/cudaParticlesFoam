@@ -16,7 +16,7 @@ Set the following `OptiX_INSTALL_DIR` variable pointing to the OptiX installatio
 export OptiX_INSTALL_DIR=${HOME}/cudaParticlesFoam/NVIDIA-OptiX-SDK-7.0.0-linux64
 ```
 
-and check that the `CUDA_HOME` is set up to `CUDA_HOME`/usr/local/cuda-10.1`:
+and check that the `CUDA_HOME` is set up to your CUDA Toolkit installation path:
 
 
 ```
@@ -29,7 +29,7 @@ Run the following commnad for building the `cudaParticleAdvection` library:
 make lib
 ```
 
-And finally build the
+And finally build the OpenFOAM solvers:
 
 ```
 make applications
@@ -37,7 +37,7 @@ make applications
 
 # Running
 
-## Running locally
+## Running with native installation
 
 Go to one of the tutorials:
 
@@ -51,7 +51,7 @@ and execute:
 ./Allrun
 ```
 
-## Running With docker
+## Running with Docker
 
 You need to first configure your machine for using GPUs within Docker containers. Follow X for instructions.
 
@@ -75,18 +75,18 @@ runWithDocker ./Allrun
 
 You will see the results and logs. The running containers can be checked with `docker ps` and any container stopped with `docker kill CONTAINER_ID`.
 
-# Credit
+# Credits
 
 This repository is built upon the following repositories:
 
-[RTXAdvect](https://github.com/BinWang0213/RTXAdvect)
-[tetMesh](https://github.com/owl-project/tetMeshQueries)
-[OpenFOAM](https://develop.openfoam.com/Development/openfoam)
+- [RTXAdvect](https://github.com/BinWang0213/RTXAdvect)
+- [tetMeshQueries](https://github.com/owl-project/tetMeshQueries)
+- [OpenFOAM](https://develop.openfoam.com/Development/openfoam)
 
 Kudos to the authors!
 
 # Licenses
 
-All the project is licensed under the GNU Lesser General Public License v3.0 except all the code in the `third_party` directory which is Apache Licence 2.0.
+All the project is licensed under the GNU Lesser General Public License v3.0 except the code inside the `third_party` directory which is licensed under Apache Licence 2.0.
 
 OPENFOAM® is a registered trade mark of OpenCFD Limited, producer and distributor of the OpenFOAM software via www.openfoam.com.
