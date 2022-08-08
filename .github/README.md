@@ -23,6 +23,8 @@ and check that the `CUDA_HOME` is set up to your CUDA Toolkit installation path:
 export CUDA_HOME=/usr/local/cuda-10.1
 ```
 
+Only OpenFOAM v2106 is currently supported. Install and load OponFOAM's environment before continuing.
+
 Run the following commnad for building the `cudaParticleAdvection` library:
 
 ```
