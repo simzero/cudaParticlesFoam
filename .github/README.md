@@ -87,6 +87,6 @@ Kudos to the authors!
 
 # Licenses
 
-All the project is licensed under the GNU Lesser General Public License v3.0 except the code inside the `third_party` directory which is licensed under Apache Licence 2.0.
+All the project is licensed under the GNU General Public License v3.0 except the code inside the `third_party` directory which is licensed under Apache Licence 2.0.
 
 OPENFOAM® is a registered trade mark of OpenCFD Limited, producer and distributor of the OpenFOAM software via www.openfoam.com.
