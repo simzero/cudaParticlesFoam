@@ -326,25 +326,17 @@ else
 
         hostTetMesh->positions.reserve(pointsSeen.size()+nCells);
     
-        std::ofstream myfile;
-        myfile.open ("pointsTest.txt");
-
-        std::ofstream myfile2;
-        myfile2.open ("tetTest.txt");
-
         forAll(pointsSeen, pointi)
         {
             vector pos = pointsSeen[pointi];
             hostTetMesh->positions.push_back(vec3d(pos.x(), pos.y(), pos.z()));
             hostTetMesh->worldBounds.extend(vec3d(pos.x(), pos.y(), pos.z()));
-            myfile << pos.x() << " " << pos.y() << " " << pos.z() << "\n";
         }
 
         forAll(allCells, celli)
         {
             vector pos = allCells[celli];
             hostTetMesh->positions.push_back(vec3d(pos.x(), pos.y(), pos.z()));
-            myfile << pos.x() << " " << pos.y() << " " << pos.z() << "\n";
             hostTetMesh->worldBounds.extend(vec3d(pos.x(), pos.y(), pos.z()));
             for (int i = 0; i < tetsPerCell; i++)
 	    {
@@ -356,7 +348,6 @@ else
 
         forAll(allV0, teti)
         {
-            myfile2 << pointsSeen.size() + allV0[teti] << " " << pointsMap[allV1[teti]] << " " << pointsMap[allV2[teti]] << " " << pointsMap[allV3[teti]] << "\n";
             vec4i v(pointsSeen.size() + allV0[teti], pointsMap[allV1[teti]], pointsMap[allV2[teti]], pointsMap[allV3[teti]]);
             hostTetMesh->indices.push_back(v);
         }

@@ -1,2 +1,2 @@
-alias runWithDocker="docker run --rm -e NVIDIA_DRIVER_CAPABILITIES=graphics,compute \
--d --rm -v \${PWD}:/sim --gpus all cudaparticlesfoam-rt"
+alias runWithDocker="docker run -e NVIDIA_DRIVER_CAPABILITIES=graphics,compute \
+  --rm -it -v \${PWD}:/sim --gpus all ghcr.io/simzero-oss/cudaparticlesfoam-rt:v0.1"

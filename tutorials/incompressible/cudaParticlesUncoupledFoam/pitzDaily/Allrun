@@ -7,6 +7,6 @@ cd "${0%/*}" || exit                                # Run from this directory
 
 blockMesh
 foamDictionary system/controlDict -entry deltaT -set 1.0
-foamJob -screen simpleFoam
+simpleFoam
 foamDictionary system/controlDict -entry deltaT -set 0.1 
-foamJob -screen cudaParticlesUncoupledFoam
+cudaParticlesUncoupledFoam

@@ -6,5 +6,5 @@ cd "${0%/*}" || exit                                # Run from this directory
 #------------------------------------------------------------------------------
 
 blockMesh
-foamJob cudaParticlesPimpleFoam
+cudaParticlesPimpleFoam
 touch foam.foam
