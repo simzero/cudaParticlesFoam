@@ -18,7 +18,7 @@ export OptiX_INSTALL_DIR=${HOME}/cudaParticlesFoam/NVIDIA-OptiX-SDK-7.0.0-linux6
 export CUDA_HOME=/usr/local/cuda-10.1
 ```
 
-If your graphics card has ray tracing cores set `RTX=true` for additional hardware acceleration.
+If your graphics card has ray tracing cores set `RTX=true` for additional hardware acceleration [1].
 
 
 Set the environment with:
@@ -84,6 +84,10 @@ runWithDocker ./Allrun
 ```
 
 You will see the results and logs. Running containers can be checked with `docker ps`. Containers can be killed with `docker kill CONTAINER_ID`.
+
+# References
+
+- [1] Wang, Bin, et al. "[An GPU-accelerated particle tracking method for Eulerian–Lagrangian simulations using hardware ray tracing cores.](https://www.sciencedirect.com/science/article/abs/pii/S0010465521003337)" Computer Physics Communications 271 (2022): 108221. 
 
 # Credits
 
