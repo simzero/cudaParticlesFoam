@@ -432,6 +432,3 @@ namespace advect {
 }
 
 #endif
-
-
-

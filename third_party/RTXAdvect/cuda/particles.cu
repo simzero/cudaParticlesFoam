@@ -773,7 +773,4 @@ namespace advect {
             cudaCheck(cudaDeviceSynchronize());
         }
     }
-
-    
-
 }
