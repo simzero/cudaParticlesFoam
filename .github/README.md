@@ -6,13 +6,13 @@ Download OptiX 7.0 for [Linux](https://developer.nvidia.com/designworks/optix/do
 
 The following command will install OptiX in a local folder:
 
-```
+```console
 ./NVIDIA-OptiX-SDK-7.0.0-linux64.sh --include-subdir --skip-license
 ```
 
 Set the enviroment variables in `etc/bashrc` pointing to your installation paths, for example:
 
-```
+```bash
 export RTX=false
 export OptiX_INSTALL_DIR=${HOME}/cudaParticlesFoam/NVIDIA-OptiX-SDK-7.0.0-linux64
 export CUDA_HOME=/usr/local/cuda-10.1
@@ -23,25 +23,25 @@ If your graphics card has ray tracing cores set `RTX=true` for additional hardwa
 
 Set the environment with:
 
-```
+```console
 source etc/bashrc
 ```
 
 Only OpenFOAM v2106 is currently supported. Install and load OpenFOAM's environment before continuing, for example:
 
-```
+```console
 source ${HOME}/OpenFOAM/OpenFOAM-v2106/etc/bashrc
 ```
 
 Run the following commnad for building the `cudaParticleAdvection` library:
 
-```
+```console
 make lib
 ```
 
 And finally build the OpenFOAM solvers:
 
-```
+```console
 make applications
 ```
 
@@ -51,13 +51,13 @@ make applications
 
 Go to one of the tutorials:
 
-```
+```console
 cd tutorials/incompressible/cudaParticlesUncoupledFoam
 ```
 
 and execute:
 
-```
+```console
 ./Allrun
 ```
 
@@ -67,19 +67,19 @@ You need to first configure your machine for using GPUs within Docker containers
 
 Once you can run Docker containers with GPUs run:
 
-```
+```console
 source etc/bashrc
 ```
 
 Go to one of the tutorials:
 
-```
+```console
 cd tutorials/incompressible/cudaParticlesUncoupledFoam
 ```
 
 and execute:
 
-```
+```console
 runWithDocker ./Allrun
 ```
 
