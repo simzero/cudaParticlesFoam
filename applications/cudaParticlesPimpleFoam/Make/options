@@ -1,4 +1,11 @@
+ifeq ($(RTX),true)
+    MACRO_DEFINED=
+else
+    MACRO_DEFINED=-DConvexPoly
+endif
+
 EXE_INC = \
+    $(MACRO_DEFINED) \
     -DNDEBUG -MD -MT -MF \
     -I$(LIB_SRC)/conversion/lnInclude \
     -I$(LIB_SRC)/fileFormats/lnInclude \

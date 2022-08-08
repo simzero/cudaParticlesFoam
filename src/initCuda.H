@@ -140,9 +140,11 @@ if(Pstream::nProcs() == 1)
     cudaCheck(cudaDeviceSynchronize());
 
 #ifdef  ConvexPoly
+    Info<< "ADVECT_MODE: ConvexPoly" <<endl;
     RTQuery(tetQueryAccelerator, devMesh,
             d_particles, d_particles_ConvextetIDs, numParticles);
 #else
+    Info<< "ADVECT_MODE: RTX" <<endl;
     RTQuery(tetQueryAccelerator, devMesh,
             d_particles, d_particles_tetIDs, numParticles);
 #endif

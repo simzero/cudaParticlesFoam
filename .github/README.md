@@ -10,20 +10,28 @@ The following command will install OptiX in a local folder:
 ./NVIDIA-OptiX-SDK-7.0.0-linux64.sh --include-subdir --skip-license
 ```
 
-Set the following `OptiX_INSTALL_DIR` variable pointing to your OptiX installation path, for example:
+Set the enviroment variables in `etc/bashrc` pointing to your installation paths, for example:
 
 ```
+export RTX=false
 export OptiX_INSTALL_DIR=${HOME}/cudaParticlesFoam/NVIDIA-OptiX-SDK-7.0.0-linux64
-```
-
-and check that the `CUDA_HOME` is set up to your CUDA Toolkit installation path:
-
-
-```
 export CUDA_HOME=/usr/local/cuda-10.1
 ```
 
-Only OpenFOAM v2106 is currently supported. Install and load OponFOAM's environment before continuing.
+If your graphics card has ray tracing cores set `RTX=true` for additional hardware acceleration.
+
+
+Set the environment with:
+
+```
+source etc/bashrc
+```
+
+Only OpenFOAM v2106 is currently supported. Install and load OpenFOAM's environment before continuing, for example:
+
+```
+source ${HOME}/OpenFOAM/OpenFOAM-v2106/etc/bashrc
+```
 
 Run the following commnad for building the `cudaParticleAdvection` library:
 
@@ -75,7 +83,7 @@ and execute:
 runWithDocker ./Allrun
 ```
 
-You will see the results and logs. The running containers can be checked with `docker ps` and any container stopped with `docker kill CONTAINER_ID`.
+You will see the results and logs. Running containers can be checked with `docker ps`. Containers can be killed with `docker kill CONTAINER_ID`.
 
 # Credits
 
