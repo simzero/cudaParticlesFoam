@@ -2,7 +2,7 @@ NOTICE: This is a work in progress, subject to change.
 
 You can use this repository without any compilation. Jump to [Running with docker](#running-with-docker) for more details, or follow the instructions below for a native installation.
 
-#Requirements
+# Requirements
 
 - NVIDIA CUDA Toolkit 10.1
 - OptiX 7.0
@@ -12,13 +12,15 @@ You can use this repository without any compilation. Jump to [Running with docke
 
 Check the [NVIDIA CUDA Installation Guide for Linux](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html) for installing the NVIDIA CUDA Toolkit 10.1. Note that the maximum supported GCC version is 8.
 
-Download OptiX 7.0 for [Linux](https://developer.nvidia.com/designworks/optix/downloads/7.0.0/linux64). You must be a member of the NVIDIA Developer Program to download OptiX.
+Download [OptiX 7.0 for Linux](https://developer.nvidia.com/designworks/optix/downloads/7.0.0/linux64). You must be a member of the NVIDIA Developer Program to download OptiX.
 
 The following command will install OptiX in a local folder:
 
 ```console
 ./NVIDIA-OptiX-SDK-7.0.0-linux64.sh --include-subdir --skip-license
 ```
+
+Only OpenFOAM v2106 is currently supported. Compile and [install OpenFOAM v2106](https://develop.openfoam.com/Development/openfoam/-/blob/OpenFOAM-v2106.211215/doc/Build.md) environment before continuing.
 
 # Building
 
@@ -33,13 +35,13 @@ export CUDA_HOME=/usr/local/cuda-10.1
 If your graphics card has ray tracing cores set `RTX=true` for additional hardware acceleration [1].
 
 
-Set the environment with:
+Set the environment for this repository with:
 
 ```console
 source etc/bashrc
 ```
 
-Only OpenFOAM v2106 is currently supported. Install and load OpenFOAM's environment before continuing, for example:
+Load OpenFOAM's enviroment:
 
 ```console
 source ${HOME}/OpenFOAM/OpenFOAM-v2106/etc/bashrc
@@ -67,7 +69,7 @@ Go to one of the tutorials:
 cd tutorials/incompressible/cudaParticlesUncoupledFoam
 ```
 
-and execute:
+Finally, run the tutorial with:
 
 ```console
 ./Allrun
@@ -77,7 +79,7 @@ and execute:
 
 You need to first configure your machine for using GPUs within Docker containers. Follow this [link](https://docs.nvidia.com/ai-enterprise/deployment-guide/dg-docker.html) for instructions.
 
-Once you can run Docker containers with GPUs run:
+Set up the enviroment with:
 
 ```console
 source etc/bashrc
@@ -89,7 +91,7 @@ Go to one of the tutorials:
 cd tutorials/incompressible/cudaParticlesUncoupledFoam/pitzDaily
 ```
 
-and execute:
+Finally, run the tutorial with:
 
 ```console
 runWithDocker ./Allrun
