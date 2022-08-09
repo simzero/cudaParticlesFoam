@@ -78,7 +78,7 @@ make applications
 Go to one of the tutorials:
 
 ```console
-cd tutorials/incompressible/cudaParticlesUncoupledFoam
+cd tutorials/incompressible/cudaParticlesUncoupledFoam/pitzDaily
 ```
 
 Finally, run the tutorial with:
