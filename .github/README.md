@@ -36,7 +36,7 @@ Only OpenFOAM v2106 is currently supported. Compile and [install OpenFOAM v2106]
 
 # Building
 
-Set the enviroment variables in `etc/bashrc` pointing to your installation paths, for example:
+Set the environment variables in `etc/bashrc` pointing to your installation paths, for example:
 
 ```bash
 export RTX=false
@@ -53,7 +53,7 @@ Set the environment for this repository with:
 source etc/bashrc
 ```
 
-Load OpenFOAM's enviroment:
+Load OpenFOAM's environment:
 
 ```console
 source ${HOME}/OpenFOAM/OpenFOAM-v2106/etc/bashrc
@@ -65,7 +65,7 @@ Run the following commnad for building the `cudaParticleAdvection` library:
 make lib
 ```
 
-And finally build the OpenFOAM solvers:
+And finally, build the OpenFOAM solvers:
 
 ```console
 make applications
@@ -91,7 +91,7 @@ Finally, run the tutorial with:
 
 You need to first configure your machine for using GPUs within Docker containers. Follow this [link](https://docs.nvidia.com/ai-enterprise/deployment-guide/dg-docker.html) for instructions.
 
-Set up the enviroment with:
+Set up the environment with:
 
 ```console
 source etc/bashrc
@@ -118,6 +118,6 @@ You will see the results and logs. Running containers can be checked with `docke
 
 # Licenses
 
-All the project is licensed under the GNU General Public License v3.0 except the code inside the `third_party` directory which is licensed under Apache Licence 2.0.
+The whole project is licensed under the GNU General Public License v3.0 except the code inside the `third_party` directory which is licensed under Apache Licence 2.0.
 
 OPENFOAM® is a registered trade mark of OpenCFD Limited, producer and distributor of the OpenFOAM software via www.openfoam.com.
