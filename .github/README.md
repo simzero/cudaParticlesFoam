@@ -1,6 +1,18 @@
 NOTICE: This is a work in progress, subject to change.
 
-You can use this repository without any compilation. Jump to [Running with docker](#running-with-docker) for more details, or follow the instructions below for a native installation.
+# Description
+
+GPU-accelerated particle tracking for OpenFOAM. You can use this repository without any compilation. Jump to [Running with docker](#running-with-docker) for more details, or follow the instructions below for a native installation.
+
+# Credits
+
+This repository is built upon the following repositories:
+
+- [RTXAdvect](https://github.com/BinWang0213/RTXAdvect)
+- [tetMeshQueries](https://github.com/owl-project/tetMeshQueries)
+- [OpenFOAM](https://develop.openfoam.com/Development/openfoam)
+
+Kudos to the authors!
 
 # Requirements
 
@@ -103,15 +115,6 @@ You will see the results and logs. Running containers can be checked with `docke
 
 - [1] Wang, Bin, et al. "[An GPU-accelerated particle tracking method for Eulerian–Lagrangian simulations using hardware ray tracing cores.](https://www.sciencedirect.com/science/article/abs/pii/S0010465521003337)" Computer Physics Communications 271 (2022): 108221. 
 
-# Credits
-
-This repository is built upon the following repositories:
-
-- [RTXAdvect](https://github.com/BinWang0213/RTXAdvect)
-- [tetMeshQueries](https://github.com/owl-project/tetMeshQueries)
-- [OpenFOAM](https://develop.openfoam.com/Development/openfoam)
-
-Kudos to the authors!
 
 # Licenses
 
