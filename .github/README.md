@@ -74,7 +74,7 @@ source etc/bashrc
 Go to one of the tutorials:
 
 ```console
-cd tutorials/incompressible/cudaParticlesUncoupledFoam
+cd tutorials/incompressible/cudaParticlesUncoupledFoam/pitzDaily
 ```
 
 and execute:
