@@ -1,6 +1,16 @@
 NOTICE: This is a work in progress, subject to change.
 
-# Building
+You can use this repository without any compilation. Jump to [Running with docker](#running-with-docker) for more details, or follow the instructions below for a native installation.
+
+#Requirements
+
+- NVIDIA CUDA Toolkit 10.1
+- OptiX 7.0
+- OpenFOAM v2106
+
+# Installing dependencies
+
+Check the [NVIDIA CUDA Installation Guide for Linux](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html) for installing the NVIDIA CUDA Toolkit 10.1. Note that the maximum supported GCC version is 8.
 
 Download OptiX 7.0 for [Linux](https://developer.nvidia.com/designworks/optix/downloads/7.0.0/linux64). You must be a member of the NVIDIA Developer Program to download OptiX.
 
@@ -9,6 +19,8 @@ The following command will install OptiX in a local folder:
 ```console
 ./NVIDIA-OptiX-SDK-7.0.0-linux64.sh --include-subdir --skip-license
 ```
+
+# Building
 
 Set the enviroment variables in `etc/bashrc` pointing to your installation paths, for example:
 
