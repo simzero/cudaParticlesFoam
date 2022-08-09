@@ -1,3 +1,5 @@
+// Copyright (c) 2022 Carlos Peña-Monferrer. All rights reserved.
+// Added integration of GPU-accelerated particle tracking in pimpleFoam
 /*---------------------------------------------------------------------------*\
   =========                 |
   \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
@@ -25,14 +27,14 @@ License
     along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
 
 Application
-    pimpleFoam.C
+    cudaParticlesPimpleFoam
 
 Group
     grpIncompressibleSolvers
 
 Description
     Transient solver for incompressible, turbulent flow of Newtonian fluids
-    on a moving mesh.
+    on a moving mesh with particle tracking on GPU.
 
     \heading Solver details
     The solver uses the PIMPLE (merged PISO-SIMPLE) algorithm to solve the
@@ -193,5 +195,6 @@ namespace advect {
 
         return 0;
     }
+
 }
 // ************************************************************************* //

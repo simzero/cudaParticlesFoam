@@ -1,3 +1,6 @@
+// Copyright (c) 2022 Carlos Peña-Monferrer. All rights reserved.
+// Added integration of GPU-accelerated particle tracking in
+// scalarTransportFoam
 /*---------------------------------------------------------------------------*\
   =========                 |
   \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
@@ -24,34 +27,13 @@ License
     along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
 
 Application
-    scalarTransportFoam
+    cudaParticlesUncoupledFoam
 
 Group
     grpBasicSolvers
 
 Description
-    Passive scalar transport equation solver.
-
-    \heading Solver details
-    The equation is given by:
-
-    \f[
-        \ddt{T} + \div \left(\vec{U} T\right) - \div \left(D_T \grad T \right)
-        = S_{T}
-    \f]
-
-    Where:
-    \vartable
-        T       | Passive scalar
-        D_T     | Diffusion coefficient
-        S_T     | Source
-    \endvartable
-
-    \heading Required fields
-    \plaintable
-        T       | Passive scalar
-        U       | Velocity [m/s]
-    \endplaintable
+    Particle tracking on GPU.
 
 \*---------------------------------------------------------------------------*/
 
@@ -77,34 +59,35 @@ namespace advect {
 
     extern "C" int main(int argc, char *argv[])
     {
-    argList::addNote
-    (
-        "Passive scalar transport equation solver."
-    );
+        argList::addNote
+        (
+            "Passive scalar transport equation solver."
+        );
 
-    #include "addCheckCaseOptions.H"
-    #include "setRootCaseLists.H"
-    #include "createTime.H"
-    #include "createMesh.H"
+        #include "addCheckCaseOptions.H"
+        #include "setRootCaseLists.H"
+        #include "createTime.H"
+        #include "createMesh.H"
 
-    simpleControl simple(mesh);
+        simpleControl simple(mesh);
 
-    #include "createFields.H"
+        #include "createFields.H"
 
-    // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+        // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-    Info<< "\nCalculating scalar transport\n" << endl;
+        Info<< "\nCalculating scalar transport\n" << endl;
 
-    #include "CourantNo.H"
+        #include "CourantNo.H"
 
-    #include "initCuda.H"
+        #include "initCuda.H"
 
-    #include "advect.H"
+        #include "advect.H"
 
-    Info<< "End\n" << endl;
+        Info<< "End\n" << endl;
 
-    return 0;
-}
+        return 0;
+    }
+
 }
 
 // ************************************************************************* //
