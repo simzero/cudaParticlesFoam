@@ -1,5 +1,6 @@
 // Copyright (c) 2022 Carlos Peña-Monferrer. All rights reserved.
-// CUDA-related code adapted from cudaParticleAdvection.cu
+// CUDA-related code (except cudaUpdateVelocity) and
+// particle tracking adapted from cudaParticleAdvection.cu
 // on https://github.com/BinWang0213/RTXAdvect/tree/ca5f6ae/cuda
 //
 /*---------------------------------------------------------------------------*\

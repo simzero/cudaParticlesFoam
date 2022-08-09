@@ -1,6 +1,7 @@
 // Copyright (c) 2022 Carlos Peña-Monferrer. All rights reserved.
-// CUDA-related code adapted from HostTetMesh.h and cudaParticleAdvection.cu
-// on https://github.com/BinWang0213/RTXAdvect/tree/ca5f6ae/cuda
+// CUDA-related code and particle tracking adapted
+// from HostTetMesh.h and cudaParticleAdvection.cu on
+// https://github.com/BinWang0213/RTXAdvect/tree/ca5f6ae/cuda
 //
 /*---------------------------------------------------------------------------*\
   =========                 |
@@ -481,7 +482,6 @@ else
         allCells.clear();
     }
 }
-
 
 /*
 cudaTimer timer_loop;
