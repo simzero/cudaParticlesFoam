@@ -71,6 +71,8 @@ And finally, build the OpenFOAM solvers:
 make applications
 ```
 
+If you change the variables on `etc/bashrc` do a `make clean` anre repeat the process before building `lib` and `applications` again.
+
 # Running
 
 ## Running with native installation
