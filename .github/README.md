@@ -2,7 +2,7 @@ NOTICE: This is a work in progress, subject to change.
 
 # Description
 
-GPU-accelerated particle tracking for OpenFOAM. You can use this repository without any compilation. Jump to [Running with docker](#running-with-docker) for more details, or follow the instructions below for a native installation.
+GPU-accelerated particle tracking for OpenFOAM. You can use this repository without compilation. Jump to [Running with Docker](#running-with-docker) for more details, or follow the instructions below for a native installation.
 
 # Credits
 
@@ -71,7 +71,7 @@ And finally, build the OpenFOAM solvers:
 make applications
 ```
 
-If you change the variables on `etc/bashrc` do a `make clean` anre repeat the process before building `lib` and `applications` again.
+If you change the variables on `etc/bashrc` do a `make clean` and repeat the process before building `lib` and `applications` again.
 
 # Running
 
