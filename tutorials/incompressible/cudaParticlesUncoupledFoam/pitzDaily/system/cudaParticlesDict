@@ -18,7 +18,7 @@ startTime       282;
 
 endTime         382;
 
-diffusionCoeff  1.5e-05;
+diffusionCoeff  1.5e-05; // cm2/s
 
 numParticles    1e05;
 
